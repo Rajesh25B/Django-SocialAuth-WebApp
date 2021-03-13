@@ -20,3 +20,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     # String representation
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return '/user/%/' % (self.pk)
+    
+    def set_password(self, password):
+        self.password = password
+        return
