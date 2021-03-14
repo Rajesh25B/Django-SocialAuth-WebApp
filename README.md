@@ -12,4 +12,4 @@ credentials. Some features are:
 
       GitHub OAuth
       Twitter OAuth
-      Facebook OAuth
+      LinkedIn OAuth
