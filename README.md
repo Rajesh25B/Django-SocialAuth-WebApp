@@ -7,10 +7,9 @@ mechanism for Django projects.
 
 * This application provides user registration and login using social site
 credentials. Some features are:
-
     - Registration and login with social sites using the following providers 
       at the moment:
 
       GitHub OAuth
-      LinkedIn OAuth
+      Twitter OAuth
       Facebook OAuth
