@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     
     # imports
     'social_django',
-    
+
     # Local
     'core',
     'users',
@@ -71,6 +71,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+               
+                'social_django.context_processors.backends', #<--
+                'social_django.context_processors.login_redirect',# <--
             ],
         },
     },
@@ -132,3 +135,23 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'core.User'
+
+SOCIAL_AUTH_JSONFIELD_CUSTOM = 'django.contrib.postgres.fields.JSONField'
+
+# Auth backends for Github,Linkedin and Twitter.
+AUTHENTICATION_BACKENDS = [
+ 
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+
+    'django.contrib.auth.backends.ModelBackend', 
+]
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'home'
+
+SESSION_COOKIE_SAMESITE = None
+SOCIAL_AUTH_GITHUB_KEY = '338e0d1622613bc854c2'
+SOCIAL_AUTH_GITHUB_SECRET = 'eefab0dda211998c47c3b1f10629c93888c25d79'

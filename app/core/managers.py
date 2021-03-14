@@ -10,15 +10,22 @@ class UserManager(BaseUserManager):
         email = kwargs.get('email', None)
         phone_number = kwargs.get('phone_number', None)
         password = kwargs.get('password', None)
+        
+        if not name:
+            name = 'Temporary name'
+
+        if not phone_number:
+            phone_number = '+9999999999'
 
         if not email:
-            raise ValueError('Enter a valid e-mail address')
+            raise TypeError('Users must have an email address.')
 
         user = self.model(
             name = name,
             phone_number = phone_number,
             email = self.normalize_email(email)
         )
+        
         if password:
             user.set_password(password)
         

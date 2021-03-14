@@ -9,8 +9,8 @@ from rest_framework import status
 
 # Local imports
 from core.models import User
-from users.seralizers import UserSerializer, UserLoginSerializer
-from django.decorators import login_required
+from users.serializers import UserSerializer, UserLoginSerializer
+from users.decorators import login_required
 
 # Create your views here.
 
