@@ -10,6 +10,6 @@ credentials. Some features are:
     - Registration and login with social sites using the following providers 
       at the moment:
 
-      GitHub OAuth
-      Twitter OAuth
-      LinkedIn OAuth
+      - GitHub OAuth
+      - Twitter OAuth
+      - LinkedIn OAuth
