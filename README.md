@@ -12,5 +12,5 @@ credentials. Some features are:
       at the moment:
 
       GitHub OAuth
-      Twitter OAuth
+      LinkedIn OAuth
       Facebook OAuth
